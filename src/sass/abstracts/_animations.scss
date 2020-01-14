@@ -1,0 +1,56 @@
+@keyframes moveLeftCallToActionArr {
+  0% {
+    transform: translateX(-7px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveRightCallToActionArr {
+  0% {
+    transform: translateX(7px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animateHeroTextMain {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animateHeroTextSub {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomInModalImage {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

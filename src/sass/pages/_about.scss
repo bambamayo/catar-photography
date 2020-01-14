@@ -1,0 +1,31 @@
+.about {
+  color: $color-black;
+  padding: 10rem 0;
+
+  &__cont {
+    width: 114rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    width: 40%;
+
+    &-text {
+      font-size: 1.8rem;
+      letter-spacing: 0.1rem;
+      margin-top: 3rem;
+
+      &::first-letter {
+        font-size: 3rem;
+        font-style: italic;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__image {
+    width: 40%;
+  }
+}
