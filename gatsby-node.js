@@ -1,7 +1,32 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require("path")
 
-// You can delete this file if you're not using it
+module.exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const galleryCategoryTemplate = path.resolve(
+    "./src/templates/GalleryCategory.js"
+  )
+
+  const res = await graphql(`
+    query {
+      allContentfulCategoryListWithPictures {
+        edges {
+          node {
+            categoryName
+          }
+        }
+      }
+    }
+  `)
+
+  res.data.allContentfulCategoryListWithPictures.edges.forEach(edge => {
+    console.log(edge.node.categoryName)
+    createPage({
+      component: galleryCategoryTemplate,
+      path: `/gallery/${edge.node.categoryName}`,
+      context: {
+        categoryName: edge.node.categoryName,
+      },
+    })
+  })
+}
