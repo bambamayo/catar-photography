@@ -69,7 +69,10 @@ const GalleryCategory = ({ location }) => {
 
   return (
     <Layout footerColor="black" footerDisplay="block" linkColor="black">
-      <SEO title={`Catar photography | Gallery - ${location.state.catName}`} />
+      <SEO
+        title={`Catar photography | Gallery - ${location.state.catName ||
+          null}`}
+      />
       {showModal ? (
         <ImageModal
           showModal={showModal}
