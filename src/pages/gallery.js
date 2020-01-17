@@ -47,7 +47,6 @@ const Gallery = () => {
                 to={`/gallery/${category.node.categoryName}`}
                 className="gallery__home-content-cont"
                 key={category.node.id}
-                state={{ catName: category.node.categoryName }}
               >
                 <div className="gallery__home-content-categoryName">
                   <p className="gallery__home-content-categoryName-name">
