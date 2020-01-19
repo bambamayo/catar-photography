@@ -1,0 +1,15 @@
+.spinner {
+  margin: 20vh auto 30vh auto;
+  border: 1.2rem solid $color-grey;
+  border-top: 1.2rem solid $color-black;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  animation: rotateSpinner 1.1s infinite;
+
+  @include respond(phone) {
+    width: 8rem;
+    height: 8rem;
+    border-width: 1rem;
+  }
+}

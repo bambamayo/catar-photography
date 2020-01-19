@@ -9,7 +9,10 @@ const Footer = ({ footerDisplay, footerColor }) => (
   >
     <ul className="footer__social-links">
       <li className="footer__social-links-listitem">
-        <a href="https://instagram.com" className="footer__social-links-link">
+        <a
+          href="https://www.instagram.com/catar_photography"
+          className="footer__social-links-link"
+        >
           <Icon
             iconClass="footer__social-links-icon"
             type={["fab", "instagram"]}
@@ -17,7 +20,21 @@ const Footer = ({ footerDisplay, footerColor }) => (
         </a>
       </li>
       <li className="social-links-listitem">
-        <a href="https://twitter.com" className="footer__social-links-link">
+        <a
+          href="https://www.facebook.com/CatarPhotography"
+          className="footer__social-links-link"
+        >
+          <Icon
+            iconClass="footer__social-links-icon"
+            type={["fab", "facebook-f"]}
+          />
+        </a>
+      </li>
+      <li className="social-links-listitem">
+        <a
+          href="https://www.twitter.com/CatarPhotograph"
+          className="footer__social-links-link"
+        >
           <Icon
             iconClass="footer__social-links-icon"
             type={["fab", "twitter"]}

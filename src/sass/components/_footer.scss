@@ -4,14 +4,14 @@
   font-weight: 600;
 
   &__social-links {
-    width: 4vw;
+    width: 8vw;
     margin: 0 auto 0.5rem auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @include respond(phone) {
-      width: 12vw;
+      width: 17vw;
     }
 
     &-listitem {
