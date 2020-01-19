@@ -65,6 +65,7 @@ const GalleryCategory = props => {
           presentCategoryName={presentCategory.categoryName}
           categoryInView={presentCategory.categoryImage}
         />
+
         <div className="gallery-pictures">
           {presentCategory.categoryImage.map(image => (
             <button

@@ -38,12 +38,9 @@
       }
     }
 
-    &-link:visited,
-    &-link:link {
-      color: $color-white;
-    }
-
-    &-link {
+    &-link,
+    &-link:link,
+    &-link:visited {
       text-decoration: none;
       color: $color-white;
       position: relative;

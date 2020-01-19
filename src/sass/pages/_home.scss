@@ -30,6 +30,10 @@
       &-sub {
         animation: animateHeroTextSub 0.6s ease-in-out 0.6s backwards;
       }
+
+      &-small {
+        animation: animateHeroTextSub 0.6s ease-in-out 1.2s backwards;
+      }
     }
   }
 

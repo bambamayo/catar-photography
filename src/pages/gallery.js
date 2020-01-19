@@ -4,6 +4,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/Layout/Seo"
 import Image from "../components/Image/Image"
+import Spinner from "../components/UI/Spinner/Spinner"
 
 const Gallery = () => {
   const [categoriesArray, setCategoriesArray] = useState(null)
@@ -38,9 +39,10 @@ const Gallery = () => {
       <SEO title="Catar photography | Gallery" />
       <section className="gallery__home">
         <h2 className="section-header">Gallery</h2>
+
         <div className="gallery__home-content">
           {categoriesArray === null ? (
-            <h3>Loadinggg</h3>
+            <Spinner />
           ) : (
             categoriesArray.map(category => (
               <Link
