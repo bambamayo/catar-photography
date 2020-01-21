@@ -66,7 +66,7 @@ const Contact = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...message }),
+      body: encode({ "form-name": "contact", ...visitorMessage }),
     })
       .then(() => {
         setInterval(() => {
@@ -99,9 +99,9 @@ const Contact = () => {
           <Spinner />
         ) : (
           <form
-            name="contact"
             onSubmit={onFormSubmitHandler}
             className="contact__form"
+            name="contact"
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
