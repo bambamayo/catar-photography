@@ -5,6 +5,7 @@ import {
   faTimes,
   faArrowRight,
   faArrowLeft,
+  faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons"
 import {
   faTwitter,
@@ -21,7 +22,8 @@ library.add(
   faArrowLeft,
   faTwitter,
   faInstagram,
-  faFacebookF
+  faFacebookF,
+  faInfoCircle
 )
 
 const IndexPage = () => (

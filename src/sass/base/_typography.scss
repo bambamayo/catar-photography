@@ -51,4 +51,19 @@ body {
   text-align: center;
   margin: 1rem 0 7rem 0;
   text-transform: uppercase;
+
+  @include respond(tab-port) {
+    font-size: 3.6rem;
+  }
+
+  &--sub {
+    font-size: 1.7rem;
+    text-align: center;
+    margin: -6rem auto 3rem auto;
+    width: 30%;
+
+    @include respond(phone) {
+      width: 85%;
+    }
+  }
 }
