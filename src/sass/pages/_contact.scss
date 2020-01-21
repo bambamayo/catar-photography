@@ -39,6 +39,7 @@
       padding: 1rem 1.5rem;
       outline: none;
       border: none;
+      border-color: transparent;
       border-bottom: 0.1rem solid $color-black;
 
       @include respond(tab-port) {
