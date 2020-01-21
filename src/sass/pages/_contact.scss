@@ -1,0 +1,130 @@
+.contact {
+  padding: 10rem 0;
+
+  @include respond(tab-land) {
+    padding: 12rem 0;
+  }
+
+  &__form {
+    width: 40%;
+    margin: 3rem auto 5rem auto;
+
+    @include respond(tab-land) {
+      width: 50%;
+    }
+
+    @include respond(tab-port) {
+      margin-bottom: 12rem;
+    }
+
+    @include respond(phone) {
+      width: 85%;
+    }
+
+    &-input-cont {
+      margin-bottom: 5rem;
+
+      @include respond(tab-port) {
+        margin-bottom: 6rem;
+      }
+    }
+
+    &-input {
+      font-family: inherit;
+      display: block;
+      box-sizing: border-box;
+      width: 70%;
+      font-size: 1.6rem;
+      margin: auto;
+      padding: 1rem 1.5rem;
+      outline: none;
+      border: none;
+      border-bottom: 0.1rem solid $color-black;
+
+      @include respond(tab-port) {
+        padding: 2rem;
+        width: 80%;
+      }
+
+      @include respond(phone) {
+        width: 95%;
+      }
+
+      &:focus {
+        background-color: $color-grey;
+        outline: none;
+        border: none;
+        border-color: transparent;
+
+        &:invalid {
+          outline: none;
+          border: none;
+          border-bottom: 0.1rem solid $color-red;
+        }
+      }
+
+      &:invalid {
+        outline: none;
+        border: none;
+        border-bottom: 0.1rem solid $color-red;
+      }
+
+      &::placeholder {
+        font-size: 1.6rem;
+      }
+
+      &-val {
+        color: $color-red;
+        font-size: 1.4rem;
+        font-weight: 600;
+        display: block;
+        text-align: center;
+        margin-top: 0.5rem;
+      }
+    }
+
+    &-button {
+      padding: 1.2rem;
+      font-family: inherit;
+      background-color: $color-black;
+      color: $color-white;
+      transition: 0.3s all;
+      display: block;
+      width: 70%;
+      cursor: pointer;
+      margin: 0 auto;
+      font-size: 1.6rem;
+      border: none;
+      outline: none;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.success {
+  color: green;
+  width: 40%;
+  margin: -4rem auto 2rem auto;
+  font-size: 2rem;
+  font-weight: 600;
+
+  @include respond(tab-land) {
+    width: 50%;
+  }
+
+  @include respond(tab-land) {
+    margin-top: -10rem;
+  }
+
+  @include respond(phone) {
+    width: 85%;
+  }
+}

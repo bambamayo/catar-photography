@@ -7,10 +7,28 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
+    @include respond(tab-land) {
+      width: 80%;
+    }
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__text {
     width: 40%;
+
+    @include respond(tab-port) {
+      width: 60%;
+      margin-bottom: 4rem;
+    }
+
+    @include respond(phone) {
+      width: 85%;
+    }
 
     &-text {
       font-size: 1.8rem;
@@ -27,5 +45,14 @@
 
   &__image {
     width: 40%;
+
+    @include respond(tab-port) {
+      width: 60%;
+      margin-bottom: 4rem;
+    }
+
+    @include respond(phone) {
+      width: 85%;
+    }
   }
 }

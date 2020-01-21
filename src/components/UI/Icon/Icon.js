@@ -7,7 +7,7 @@ const Icon = ({ iconClass, type, iconClicked }) => (
 )
 
 Icon.propTypes = {
-  type: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  type: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
   iconClass: PropTypes.string,
   iconClicked: PropTypes.func,
 }
