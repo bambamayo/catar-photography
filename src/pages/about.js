@@ -7,10 +7,11 @@ import Image from "../components/Image/Image"
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "use.JPG" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
+      contentfulAbout {
+        aboutImage {
+          description
+          fluid(maxWidth: 1000) {
+            ...GatsbyContentfulFluid
           }
         }
       }
@@ -24,21 +25,25 @@ const About = () => {
         <div className="about__cont">
           <div className="about__image">
             <Image
-              imageAlt="will change later"
+              imageAlt={data.contentfulAbout.aboutImage.description}
               imageClass="about__image-image"
-              imageSrc={data.file.childImageSharp.fluid}
+              imageSrc={data.contentfulAbout.aboutImage.fluid}
             />
           </div>
           <div className="about__text">
             <p className="about__text-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              dolor illo labore. Ipsum, earum explicabo dolore, dignissimos
-              dolor perspiciatis ex quas, molestias hic ullam commodi quae odio!
-              Amet, officiis praesentium!Tempore incidunt maxime, beatae
-              delectus soluta natus eaque nesciunt voluptatum rem quam suscipit
-              repellat blanditiis id nam dolorem, earum consequatur. Natus
-              consectetur saepe nisi modi ipsam laboriosam voluptatem! Ad,
-              excepturi.
+              I am Ayomikun Owolabi, Catar. My love for Art was born at age ten,
+              when capturing moments was done with crayon and paper and from "My
+              Book of Bible Stories"- a must have for kids then. As technology
+              permeated the boundaries of Nigeria, I not only recreated
+              pictures, I began to capture moments through pictures.
+            </p>
+            <p className="about__text-text">
+              I started with an IPhone 6 and my first model, Mariam, who turned
+              out to become my biggest fan and the catalyst behind the creation
+              of catar_photography, my Instagram photography page. Many people
+              don't believe my pictures are products of a phone maybe they never
+              will.
             </p>
           </div>
         </div>
