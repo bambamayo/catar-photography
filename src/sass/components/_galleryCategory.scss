@@ -119,6 +119,9 @@
       cursor: pointer;
       color: $color-white;
       z-index: 8;
+      border: none;
+      outline: none;
+      background-color: transparent;
 
       @include respond(tab-land) {
         font-size: 3rem;
@@ -133,14 +136,17 @@
       cursor: pointer;
       color: $color-white;
       z-index: 8;
+      border: none;
+      outline: none;
+      background-color: transparent;
 
       @include respond(tab-land) {
         font-size: 3rem;
       }
 
-      @include respond(phone) {
-        font-size: 2rem;
-      }
+      // @include respond(phone) {
+      //   font-size: 2rem;
+      // }
     }
 
     &-right {
@@ -151,14 +157,17 @@
       cursor: pointer;
       color: $color-white;
       z-index: 8;
+      border: none;
+      outline: none;
+      background-color: transparent;
 
       @include respond(tab-land) {
         font-size: 3rem;
       }
 
-      @include respond(phone) {
-        font-size: 2rem;
-      }
+      // @include respond(phone) {
+      //   font-size: 2rem;
+      // }
     }
   }
 }

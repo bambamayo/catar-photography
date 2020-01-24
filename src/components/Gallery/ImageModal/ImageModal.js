@@ -1,5 +1,4 @@
 import React from "react"
-import Icon from "../../UI/Icon/Icon"
 
 const ImageModal = ({
   children,
@@ -15,24 +14,29 @@ const ImageModal = ({
       className="gallery-image-modal"
       style={showModal ? { width: "100%" } : { width: "0" }}
     >
-      <Icon
-        type="times"
-        iconClass="gallery-image-modal-close"
-        iconClicked={closeModal}
-      />
-      <span
+      <button
+        aria-label="close images modal icon"
+        className="gallery-image-modal-close"
+        onClick={closeModal}
+      >
+        &#215;
+      </button>
+      <button
+        aria-label="go to previous image icon in images modal"
         style={index < 1 ? { display: "none" } : null}
         className="gallery-image-modal-left"
+        onClick={arrowLeftClicked}
       >
-        <Icon type="arrow-left" iconClicked={arrowLeftClicked} />
-      </span>
-
-      <span
+        &#8592;
+      </button>
+      <button
+        aria-label="go to next image icon in images modal"
         className="gallery-image-modal-right"
         style={index === arrLength ? { display: "none" } : null}
+        onClick={arrowRightClicked}
       >
-        <Icon type="arrow-right" iconClicked={arrowRightClicked} />
-      </span>
+        &#8594;
+      </button>
 
       {children}
     </div>
