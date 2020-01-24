@@ -1,12 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { library } from "@fortawesome/fontawesome-svg-core"
-import {
-  faTimes,
-  faArrowRight,
-  faArrowLeft,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons"
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons"
 import {
   faTwitter,
   faInstagram,
@@ -16,15 +11,7 @@ import "../sass/main.scss"
 import Layout from "../components/Layout/Layout"
 import SEO from "../components/Layout/Seo"
 
-library.add(
-  faTimes,
-  faArrowRight,
-  faArrowLeft,
-  faTwitter,
-  faInstagram,
-  faFacebookF,
-  faInfoCircle
-)
+library.add(faTwitter, faInstagram, faFacebookF, faInfoCircle)
 
 const IndexPage = () => (
   <Layout footerDisplay="none" linkColor="white" logoColor="white">
