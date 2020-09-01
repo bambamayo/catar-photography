@@ -9,7 +9,7 @@ const InputField = props => {
       inputElement = <input {...props} />
       break
     case "textarea":
-      inputElement = <textarea {...props} />
+      inputElement = <textarea {...props} style={{ resize: "none" }} />
       break
     default:
       inputElement = <input {...props} />

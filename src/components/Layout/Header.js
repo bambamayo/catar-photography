@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import Img from "gatsby-image"
 
-const Header = ({ linkColor }) => {
+const Header = ({ linkColor, bgColor }) => {
   const data = useStaticQuery(graphql`
     query {
       contentfulLogo {
@@ -19,7 +19,7 @@ const Header = ({ linkColor }) => {
   return (
     <header className="header">
       <nav className="header__nav">
-        <div className="logo-box">
+        <div className="logo-box" style={{ backgroundColor: bgColor }}>
           <Link to="/" className="site-logo">
             <Img
               className="site-logo-image"
@@ -67,6 +67,7 @@ const Header = ({ linkColor }) => {
 
 Header.propTypes = {
   linkColor: PropTypes.string.isRequired,
+  bgColor: PropTypes.string.isRequired,
 }
 
 export default Header

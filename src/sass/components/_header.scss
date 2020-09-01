@@ -48,6 +48,7 @@
       height: 100%;
       margin-bottom: 0.2rem;
       transition: 0.3s all;
+      border-bottom: 0.1rem solid transparent;
 
       &:hover {
         border-bottom: 0.1rem solid $color-black;

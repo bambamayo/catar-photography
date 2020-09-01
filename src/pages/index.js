@@ -14,7 +14,12 @@ import SEO from "../components/Layout/Seo"
 library.add(faTwitter, faInstagram, faFacebookF, faInfoCircle)
 
 const IndexPage = () => (
-  <Layout footerDisplay="none" linkColor="white" logoColor="white">
+  <Layout
+    footerDisplay="none"
+    linkColor="white"
+    logoColor="white"
+    bgColor="white"
+  >
     <SEO title="Catar photography | Home" />
     <section className="hero">
       <div className="text-box">
