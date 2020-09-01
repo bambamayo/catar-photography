@@ -10,10 +10,11 @@ const Layout = ({
   linkColor,
   footerColor,
   logoColor,
+  bgColor,
 }) => {
   return (
     <>
-      <Header linkColor={linkColor} logoColor={logoColor} />
+      <Header bgColor={bgColor} linkColor={linkColor} logoColor={logoColor} />
       <main>{children}</main>
       <Footer footerDisplay={footerDisplay} footerColor={footerColor} />
     </>
@@ -25,6 +26,7 @@ Layout.propTypes = {
   footerDisplay: PropTypes.string,
   linkColor: PropTypes.string,
   footerColor: PropTypes.string,
+  bgColor: PropTypes.string,
 }
 
 export default Layout
