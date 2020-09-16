@@ -8,18 +8,12 @@ import {
   faFacebookF,
 } from "@fortawesome/free-brands-svg-icons"
 import "../sass/main.scss"
-import Layout from "../components/Layout/Layout"
 import SEO from "../components/Layout/Seo"
 
 library.add(faTwitter, faInstagram, faFacebookF, faInfoCircle)
 
 const IndexPage = () => (
-  <Layout
-    footerDisplay="none"
-    linkColor="white"
-    logoColor="white"
-    bgColor="white"
-  >
+  <div className="index__wrapper">
     <SEO title="Catar photography | Home" />
     <section className="hero">
       <div className="text-box">
@@ -35,7 +29,7 @@ const IndexPage = () => (
         </Link>
       </div>
     </section>
-  </Layout>
+  </div>
 )
 
 export default IndexPage
